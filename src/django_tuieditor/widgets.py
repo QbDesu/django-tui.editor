@@ -1,5 +1,4 @@
 from django import forms
-from django.contrib.admin.widgets import AdminTextareaWidget
 
 
 class MarkdownEditorWidget(forms.Textarea):
