@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="django_tuieditor",
-    version="0.1.0",
+    version="0.2.0",
     author="Qb",
     author_email="qb@qbit.moe",
     description="Markdown editor and viewer widgets for Django",
@@ -22,6 +22,13 @@ setuptools.setup(
     ],
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
+    package_data = {
+        "django_tuieditor": [
+            "static/django_tuieditor/*.css",
+            "static/django_tuieditor/*.js",
+            "templates/django_tuieditor/*.html"
+        ],
+    },
     install_requires=[
         "cmarkgfm",
         "django"
